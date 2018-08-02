@@ -1,12 +1,12 @@
 package algoritmes;
 
-import algoritmes.sort.SelectionSort;
+import algoritmes.sort.InsertionSort;
 import org.junit.jupiter.api.Test;
 import utils.ArrayUtils;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SelectionSortTest {
+class InsertionSortTest {
 
     @Test
     void sort() {
@@ -15,9 +15,9 @@ class SelectionSortTest {
         // asserting that array is not sorted at start
         assertFalse(ArrayUtils.isSorted(i));
 
-        SelectionSort.sort(i);
+        InsertionSort.sort(i);
 
-        // asserting that array is sorted after SelectionSort.sort(i)
+        // asserting that array is sorted after InsertionSort.sort(i)
         assertTrue(ArrayUtils.isSorted(i));
     }
 }

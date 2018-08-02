@@ -1,4 +1,6 @@
-package algoritmes;
+package algoritmes.sort;
+
+import utils.ArrayUtils;
 
 /**
  * class with implementing of selection sort
@@ -17,18 +19,7 @@ public class SelectionSort {
                     min = j;
                 }
             }
-            exchange(a, i, min);
+            ArrayUtils.swap(a, i, min);
         }
-    }
-
-    /**
-     * @param a array in which will be exchanging
-     * @param i index of exchange
-     * @param min index of exchange
-     */
-    private static void exchange(int[] a, int i, int min) {
-        int temp = a[i];
-        a[i] = a[min];
-        a[min] = temp;
     }
 }
