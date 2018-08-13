@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.Random;
+
 /**
  * class with static method for array working
  */
@@ -26,5 +28,18 @@ public class ArrayUtils {
         int temp = a[i];
         a[i] = a[min];
         a[min] = temp;
+    }
+
+    public static void shuffleRandomly(int a[]) {
+        Random r = new Random();
+
+        for (int i = a.length-1; i > 0; i--) {
+
+            // Pick a random index from 0 to i
+            int j = r.nextInt(i);
+
+            // swap with random item
+            swap(a, i, j);
+        }
     }
 }

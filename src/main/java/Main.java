@@ -1,3 +1,4 @@
+import algoritmes.sort.QuickSort;
 import algoritmes.sort.ShellSort;
 import utils.ArrayUtils;
 

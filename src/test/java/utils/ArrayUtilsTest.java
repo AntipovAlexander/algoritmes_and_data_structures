@@ -20,4 +20,16 @@ class ArrayUtilsTest {
 
         assertFalse(ArrayUtils.isSorted(a));
     }
+
+    @Test
+    void shuffleTest() {
+        int[] a = {1, 2, 3, 0, 10, 22, 500};
+        int[] b = a.clone();
+
+        ArrayUtils.shuffleRandomly(a);
+
+        for (int i = 0; i < a.length-1; i++ ) {
+            assert a[i] != b[i];
+        }
+    }
 }
